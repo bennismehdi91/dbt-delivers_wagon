@@ -1,0 +1,65 @@
+version: 2
+
+models:
+  - name: stg_dbt_recap__product
+    description: "Product information Table"
+    columns:
+      - name: products_id
+        data_type: int64
+        description: ""
+        tests:
+          - unique
+          - not_null
+
+      - name: purchse_price
+        data_type: string
+        description: ""
+
+  - name: stg_dbt_recap__sales
+    description: "Sales information table"
+    columns:
+      - name: date_date
+        data_type: date
+        description: ""
+
+      - name: orders_id
+        data_type: int64
+        description: ""
+        tests:
+          - unique
+          - not_null
+
+      - name: pdt_id
+        data_type: int64
+        description: ""
+
+      - name: revenue
+        data_type: float64
+        description: ""
+
+      - name: quantity
+        data_type: int64
+        description: ""
+
+  - name: stg_dbt_recap__ship
+    description: "Shipment information table"
+    columns:
+      - name: orders_id
+        data_type: int64
+        description: ""
+
+      - name: shipping_fee
+        data_type: float64
+        description: ""
+
+      - name: shipping_fee_1
+        data_type: float64
+        description: ""
+
+      - name: logcost
+        data_type: float64
+        description: ""
+
+      - name: ship_cost
+        data_type: string
+        description: ""
