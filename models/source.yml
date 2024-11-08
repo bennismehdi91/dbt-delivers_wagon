@@ -3,8 +3,7 @@ version: 2
 sources:
   - name: dbt_recap
     tables:
-    - name: product
-      identifier: raw_gz_product
+    - name: raw_gz_product
     - name: sales
       identifier: raw_gz_sales
     - name: ship
