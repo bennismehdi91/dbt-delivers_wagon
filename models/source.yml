@@ -5,7 +5,16 @@ sources:
     tables:
     - name: product
       identifier: raw_gz_product 
+      freshness:
+        warn_after: {count: 1, period: day}
+        error_after: {count: 7, period: day}
     - name: sales
       identifier: raw_gz_sales
+      freshness:
+        warn_after: {count: 1, period: day}
+        error_after: {count: 7, period: day}
     - name: ship
       identifier: raw_gz_ship
+      freshness:
+        warn_after: {count: 1, period: day}
+        error_after: {count: 7, period: day}

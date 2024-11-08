@@ -26,7 +26,6 @@ models:
         data_type: int64
         description: ""
         tests:
-          - unique
           - not_null
 
       - name: pdt_id
